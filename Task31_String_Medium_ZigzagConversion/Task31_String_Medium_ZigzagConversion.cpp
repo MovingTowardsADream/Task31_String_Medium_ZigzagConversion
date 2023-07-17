@@ -12,7 +12,6 @@ public:
         int n = s.length(), count = 0, tmp = 0, direction = 1;
         std::string res;
         while (count < n) {
-            std::cout << count;
             result[tmp].push_back(s[count]);
             if (tmp >= numRows - 1) {
                 direction = -1;
@@ -24,10 +23,10 @@ public:
             count++;
         }
         for (auto i : result) {
-            std::cout << i << std::endl;
+            res.append(i);
         }
         return res;
-    } // PAYPALISHIRING
+    }
 };
 
 // It's fast solution
@@ -58,13 +57,13 @@ public:
 //                }
 //            }
 //        }
-//
+// 
 //        count = numRows - 1;
 //        while (count < n) {
 //            result.push_back(s[count]);
 //            count += in_row;
 //        }
-//
+// 
 //        return result;
 //    }
 //};
